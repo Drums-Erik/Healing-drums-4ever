@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over mij</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="head">
+        <div class="navbar">
+            <div class="logo">
+                <button class="transparant-button" onclick="window.location.href='homepage.html'">
+                    <img src="Afbeeldingen/Logo drums for ever.svg" alt="Logo" width="125px">
+                </button>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a class="nav-a-other" href="homepage.html">Thuispagina</a>
+                    </li>
+                    <li>
+                        <a class="nav-a-other" href="Drums.html">Onze Healing Drums</a>
+                    </li>
+                    <li>
+                        <a class="nav-a-other" href="About.html">Over mij</a>
+                    </li>
+                    <li>
+                        <a class="nav-a-current" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="headtext">
+            <h2>Neem contact op
+            </h2>
+            <p> Je mag me steeds contacteren voor</p>
+            <p>al je vragen,</p>
+            <p>opmerkingen</p>
+            <p>of bestellingen</p>
+        </div>
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-center">
+                <input type="hidden" name="access_key" value="51acc7c7-214b-447e-b4bc-68ac6b334323">
+                <input type="text" name="name" placeholder="Je naam" class="contact-inputs" required>
+                <input type="email" name="email" placeholder="Je mailadres" class="contact-inputs" required>
+                <textarea name="message" cols="30" rows="10" placeholder="Je bericht" class="contact-inputs" required></textarea>
+                <div class="h-captcha" data-lang="nl" data-captcha="true"></div>
+                <button type="submit" class="button">Submit</button>
+                <script src="https://web3forms.com/client/script.js" async defer></script>
+            </form>
+        </div>
+    </div>
+    <hr />
+    <div class="row-footnote">
+        <div class="col-3">
+            <a class="a-foot" href="mailto:Healing-drums-4ever@hotmail.com">Healing-drums-4ever@hotmail.com</a>
+        </div>
+        <div class="col-3">
+            <button class="transparant-button" onclick="window.location.href='homepage.html'">
+            <img class="inverted-image" src="Afbeeldingen/Logo drums for ever.svg" alt="" width="100%">
+            </button>
+        </div>
+        <div class="col-3">
+            <p>Volg ons op Facebook</p>
+            <a href="https://www.facebook.com/erik.jacobs.585559" class="fa fa-facebook"></a>
+        </div>
+    </div>
+</body>
+</html>

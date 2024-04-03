@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over mij</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        var current=1;
+        var total=4;
+        var time;
+        function imageChanger() { time=setTimeout("change()", 5000);}
+        function changeImage() { current++;
+        if(current > total) currPic=1;
+        document.getElementById("image").src="image"+current+".jpeg";
+        setupPicChange();}</script>
+</head>
+<body onLoad="imageChanger();">
+    <div class="navbar">
+        <div class="logo">
+            <button class="transparant-button" onclick="window.location.href='homepage.html'">
+                <img src="Afbeeldingen/Logo drums for ever.svg" alt="Logo" width="125px">
+            </button>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a class="nav-a-other" href="homepage.html">Thuispagina</a>
+                </li>
+                <li>
+                    <a class="nav-a-current" href="Drums.html">Onze Healing Drums</a>
+                </li>
+                <li>
+                    <a class="nav-a-other" href="About.html">Over mij</a>
+                </li>
+                <li>
+                    <a class="nav-a-other" href="Contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <div class="arrow prev-arrow" onclick="changeSlide(currentSlide - 1)">
+                        <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <img id="slide-1" src="Afbeeldingen/rund/26-01-2021/Rund 2.1.jpg" alt="" />
+                    <div class="arrow next-arrow" onclick="changeSlide(currentSlide + 1)">
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                    <img id="slide-2" src="Afbeeldingen/rund/26-01-2021/Rund 2.2.jpg" alt="" />
+                    <div class="arrow prev-arrow" onclick="changeSlide(currentSlide - 1)">
+                        <i class="fa fa-chevron-left"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <h3><u>Kleine Drum (40cm </u> <font size="+3pt">&#x2300;</font>) van runderleer</h3>
+            <p>
+                Deze drum heeft een diameter van 40 cm en rundsvel met een beetje haar. Zijn vlekken maken hem iets speelser qua uitzicht.
+            </p>
+            <p>
+                De koe leert je om met open hart te geven en te ontvangen. De koe staat als totemdier symbool voor overvloed, rijkdom, banden met vorige levens, betrouwbaarheid en grootmoedigheid.
+            </p>
+            <p>
+                Gratis drumstok bijgeleverd.
+            </p>
+            <p>
+                Om deze Healing Drum te bestellen of als u nog enkele vragen heeft kan u ons contact formulier invullen.
+            </p>
+            <button class="button" onclick="location.href='Contact.html';">Contact Formulier</button>
+        </div>
+    </div>
+    <hr />
+    <div class="row-footnote">
+        <div class="col-3">
+            <a class="a-foot" href="mailto:Healing-drums-4ever@hotmail.com">Healing-drums-4ever@hotmail.com</a>
+        </div>
+        <div class="col-3">
+            <button class="transparant-button" onclick="window.location.href='homepage.html'">
+            <img class="inverted-image" src="Afbeeldingen/Logo drums for ever.svg" alt="" width="100%">
+            </button>
+        </div>
+        <div class="col-3">
+            <p>Volg ons op Facebook</p>
+            <a href="https://www.facebook.com/erik.jacobs.585559" class="fa fa-facebook"></a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let currentSlide = 1;
+        const totalSlides = document.querySelectorAll('.slider img').length;
+        let autoSlideInterval;
+
+        function changeSlide(slideNumber) {
+            slideNumber = slideNumber < 1 ? totalSlides : slideNumber;
+            slideNumber = slideNumber > totalSlides ? 1 : slideNumber;
+            document.querySelector('.slider').scrollTo({
+                left: (slideNumber - 1) * document.querySelector('.slider').clientWidth,
+                behavior: 'smooth'
+            });
+            currentSlide = slideNumber;
+            clearInterval(autoSlideInterval); // Clear existing auto slide interval
+            autoSlideInterval = setInterval(() => {
+                changeSlide(currentSlide + 1);
+            }, 5000); // Reset auto slide interval after manual slide change
+            event.preventDefault(); // Prevent the default behavior of anchor tag
+        }
+
+        // Auto slider
+        autoSlideInterval = setInterval(() => {
+            changeSlide(currentSlide + 1);
+        }, 5000); // Change slide every 5 seconds
+    </script>
+</body>
+</html>
